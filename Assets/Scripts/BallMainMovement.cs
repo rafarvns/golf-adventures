@@ -1,27 +1,33 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using MediaScripts;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class BallMainMovement : MonoBehaviour
 {
-
+    public bool canMove = true;
     public float speed = 5;
+    public StageMusicController stageMusicController;
+    
     private bool _isMoving = false;
     private Rigidbody _rigidbody;
     private Vector3 _direction;
+    
     
     void Start()
     {
         _rigidbody = GetComponentInChildren<Rigidbody>();
     }
-
     
     void Update()
     {
+        if (!canMove) return;
+        
         if (!_isMoving && _rigidbody)
         {
+            bool willPlaySwingSound = true;
             if (Input.GetKeyDown("w"))
             {
                 _direction = new Vector3(0f, 0.75f, 1f * speed);
@@ -39,6 +45,15 @@ public class BallMainMovement : MonoBehaviour
                 _direction = new Vector3(1f * speed, 0.75f, 0f);
                 _isMoving = true;
             }
+            else
+            {
+                willPlaySwingSound = false;
+            }
+
+            if (willPlaySwingSound)
+            {
+                stageMusicController.PlaySoundEffect(SoundEffectEnum.GOLF_SWING);
+            }
         } else if (_isMoving && _rigidbody)
         {
             _rigidbody.AddForce(_direction);
@@ -52,6 +67,7 @@ public class BallMainMovement : MonoBehaviour
             _isMoving = false;
             _direction = new Vector3(0f, 0.75f, 0f);
             _rigidbody.velocity = Vector3.zero;
+            stageMusicController.PlaySoundEffect(SoundEffectEnum.WALL_HIT);
         }
     }
 }

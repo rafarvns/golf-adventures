@@ -19,6 +19,6 @@ public class GameManager : MonoBehaviour
     public void IncrementPlayCount()
     {
         playCount++;
-        playCountText.text = "Jogadas: " + playCount;
+        playCountText.text = playCount.ToString();
     }
 }

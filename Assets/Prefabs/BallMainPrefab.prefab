@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  stageMusicController: {fileID: 0}
 --- !u!1 &1704716718878365398
 GameObject:
   m_ObjectHideFlags: 0
