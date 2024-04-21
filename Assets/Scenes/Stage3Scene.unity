@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3650,6 +3650,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 248434527284674518, guid: 9422cb82eff701048aa529093378752b, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 248434527284674518, guid: 9422cb82eff701048aa529093378752b, type: 3}
+      propertyPath: m_fontSize
+      value: 46
+      objectReference: {fileID: 0}
     - target: {fileID: 3678494150847984294, guid: 9422cb82eff701048aa529093378752b, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -3693,6 +3701,14 @@ PrefabInstance:
     - target: {fileID: 6672852959274272240, guid: 9422cb82eff701048aa529093378752b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171139194937290278, guid: 9422cb82eff701048aa529093378752b, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171139194937290278, guid: 9422cb82eff701048aa529093378752b, type: 3}
+      propertyPath: m_fontSize
+      value: 46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
