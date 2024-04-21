@@ -1626,6 +1626,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1839056038692352626, guid: a2c87397eb854d04c9a29e84fe3046be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 5457009892184736087, guid: a2c87397eb854d04c9a29e84fe3046be, type: 3}
       propertyPath: m_Name
       value: BandeiraPrefab
