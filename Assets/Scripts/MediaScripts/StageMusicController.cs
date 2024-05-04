@@ -6,6 +6,7 @@ namespace MediaScripts
 {
     public class StageMusicController : MonoBehaviour
     {
+        public bool onlyBackground = false;
         public AudioClip backgroundMusic;
         public AudioClip startMusic;
         public AudioClip victoryMusic;
@@ -21,6 +22,10 @@ namespace MediaScripts
 
         void Start()
         {
+            if (onlyBackground)
+            {
+                _state = 0;
+            }
             _backgroundAudioSource = GetComponent<AudioSource>();
             _soundEffectsList = new List<AudioSource>();
         }
@@ -32,8 +37,12 @@ namespace MediaScripts
                 PlayBackgroundMusic();
                 _previousState = _state;
             }
-            ChangeDefaultBackgroundMusicWhenCurrentHasBeenFinished();
-            ExcludeInactivesoundEffects();
+
+            if (!onlyBackground)
+            {
+                ChangeDefaultBackgroundMusicWhenCurrentHasBeenFinished();
+                ExcludeInactivesoundEffects();                
+            }
         }
 
         private void PlayBackgroundMusic()

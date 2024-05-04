@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3529,7 +3529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1748988630796870434, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
       propertyPath: speed
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1748988630796870434, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
       propertyPath: stageMusicController
@@ -3661,6 +3661,10 @@ PrefabInstance:
     - target: {fileID: 3678494150847984294, guid: 9422cb82eff701048aa529093378752b, type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 5383251712669878604, guid: 9422cb82eff701048aa529093378752b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6672852959274272240, guid: 9422cb82eff701048aa529093378752b, type: 3}
       propertyPath: m_LocalPosition.x
