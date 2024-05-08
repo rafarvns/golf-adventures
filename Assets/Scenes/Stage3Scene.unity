@@ -1010,7 +1010,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3303103220616019620, guid: 54f5ea881a05211409ca6a92da824309, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.09
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 3303103220616019620, guid: 54f5ea881a05211409ca6a92da824309, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1234,7 +1234,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5.247438
   m_Depth: -3
   m_CullingMask:
     serializedVersion: 2
@@ -1277,8 +1277,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1be618d0a4eb014aa4a01b791ba77c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  wireColor: {r: 1, g: 1, b: 1, a: 1}
+  UnitsSize: 14
+  constraint: 0
+  camera: {fileID: 963194227}
 --- !u!1001 &964239549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3033,6 +3035,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c59738c21d27084ea62f881e99081cf, type: 3}
+--- !u!114 &1943875909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 371657712425369823, guid: 9422cb82eff701048aa529093378752b, type: 3}
+  m_PrefabInstance: {fileID: 2108263095387574936}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d5c84c2b4805146935215961fba5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1955705679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3529,8 +3542,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1748988630796870434, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
       propertyPath: speed
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1748988630796870434, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
+      propertyPath: playCounter
+      value: 
+      objectReference: {fileID: 1943875909}
     - target: {fileID: 1748988630796870434, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
       propertyPath: stageMusicController
       value: 
@@ -3541,7 +3558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6806312160945776863, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6806312160945776863, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3577,7 +3594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067329598127062433, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
       propertyPath: m_Mass
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9067329598127062433, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
       propertyPath: m_AngularDrag
@@ -3585,7 +3602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067329598127062433, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 9067329598127062433, guid: 7ac8d590f128c154b9a58ca498e22c87, type: 3}
       propertyPath: m_ImplicitTensor

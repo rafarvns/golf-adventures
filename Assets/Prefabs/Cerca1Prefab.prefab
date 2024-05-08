@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: e7395fc22eda4524891839c5df6fe9a7, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: e7395fc22eda4524891839c5df6fe9a7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

@@ -1992,7 +1992,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 2.9985359
   m_Depth: -3
   m_CullingMask:
     serializedVersion: 2
@@ -2016,13 +2016,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27986962, y: -0.26816016, z: 0.14209762, w: 0.9108081}
-  m_LocalPosition: {x: -15.54, y: 11.58, z: -11.35}
+  m_LocalRotation: {x: 0.25744534, y: -0.2897566, z: 0.068541534, w: 0.9192743}
+  m_LocalPosition: {x: -15.55, y: 10.48, z: -11.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 35.875, y: -30.311, z: 7.713}
+  m_LocalEulerAnglesHint: {x: 30.867, y: -35.417, z: -1.547}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2035,8 +2035,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1be618d0a4eb014aa4a01b791ba77c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  wireColor: {r: 1, g: 1, b: 1, a: 1}
+  UnitsSize: 8
+  constraint: 0
+  camera: {fileID: 963194227}
 --- !u!1001 &964239549
 PrefabInstance:
   m_ObjectHideFlags: 0
