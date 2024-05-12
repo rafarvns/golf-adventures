@@ -2,18 +2,16 @@ using UnityEngine;
 
 public class VerticalMoveText : MonoBehaviour
 {
-    public float speed = 5.0f; // Velocidade do movimento
-    public float distance = 500.0f; // Distância vertical que o texto deve percorrer
+    public float speed = 5f; // Velocidade de movimento
+    public float distance = 1000f; // Distância vertical que o texto deve percorrer
 
-    private Vector3 startPosition; // Posição inicial
-    private Vector3 endPosition; // Posição final
-    private bool isMovingUp = true; // Controla se o texto está subindo
+    private Vector3 startPosition;
+    private Vector3 endPosition;
+    private bool isMovingUp = true;
 
     void Start()
     {
-        // Define a posição inicial na posição atual do objeto
         startPosition = transform.position;
-        // Define a posição final adicionando a distância ao y da posição inicial
         endPosition = new Vector3(startPosition.x, startPosition.y + distance, startPosition.z);
     }
 
@@ -21,15 +19,25 @@ public class VerticalMoveText : MonoBehaviour
     {
         if (isMovingUp)
         {
-            // Move o texto para cima até a posição final
             transform.position = Vector3.MoveTowards(transform.position, endPosition, speed * Time.deltaTime);
-
-            // Checa se o texto alcançou a posição final
             if (Vector3.Distance(transform.position, endPosition) < 0.1f)
             {
-                isMovingUp = false; // Desativa o movimento para cima
+                isMovingUp = false;
+                ActivateText2(); // Chamada para ativar o Texto 2
+            }
+        }
+    }
+
+    void ActivateText2()
+    {
+        GameObject text2 = GameObject.Find("Agradecimentos"); // Substitua pelo nome correto do objeto Texto 2
+        if (text2 != null)
+        {
+            AnimateText2 animateText2 = text2.GetComponent<AnimateText2>();
+            if (animateText2 != null)
+            {
+                animateText2.StartAnimationWithDelay();
             }
         }
     }
 }
-
