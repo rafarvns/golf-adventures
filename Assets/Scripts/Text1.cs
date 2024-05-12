@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class VerticalMoveText : MonoBehaviour
 {
-    public float speed = 5f; // Velocidade de movimento
-    public float distance = 1000f; // Distância vertical que o texto deve percorrer
+    public float speed = 5f; 
+    public float distance = 1000f; 
 
     private Vector3 startPosition;
     private Vector3 endPosition;
@@ -23,14 +23,14 @@ public class VerticalMoveText : MonoBehaviour
             if (Vector3.Distance(transform.position, endPosition) < 0.1f)
             {
                 isMovingUp = false;
-                ActivateText2(); // Chamada para ativar o Texto 2
+                ActivateText2(); 
             }
         }
     }
 
     void ActivateText2()
     {
-        GameObject text2 = GameObject.Find("Agradecimentos"); // Substitua pelo nome correto do objeto Texto 2
+        GameObject text2 = GameObject.Find("Agradecimentos");
         if (text2 != null)
         {
             AnimateText2 animateText2 = text2.GetComponent<AnimateText2>();
