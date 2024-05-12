@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 583758632}
   - component: {fileID: 583758634}
   - component: {fileID: 583758633}
+  - component: {fileID: 583758635}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -420,7 +421,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 140}
+  m_AnchoredPosition: {x: -204, y: -295}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &583758633
@@ -443,15 +444,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Desenvolvimento e Produ\xE7\xE3o\r\nEnzo Bateli Cyrino\r\n\r\nDesign de
-    Cen\xE1rios (Blender)\r\nModelagem e Texturiza\xE7\xE3o de Elementos Ambientais\r\nEvans
-    Decleve Aguiar Farias\r\n\r\nEngenharia de Software e Interface do Usu\xE1rio\r\nScripting
-    e Implementa\xE7\xE3o de Recursos Interativos\r\nGuilherme Bansemer da Rocha\r\n\r\nDesign
-    de Cen\xE1rios (Blender)\r\nModelagem e Texturiza\xE7\xE3o de Elementos Ambientais\r\nRafael
-    Ara\xFAjo Gl\xF3ria\r\n\r\nDesenvolvimento de Gameplay e L\xF3gica de Programa\xE7\xE3o\r\nScripting
-    e Implementa\xE7\xE3o de Recursos Interativos\r\nAgradecimentos Especiais\r\nPontif\xEDcia
-    Universidade Cat\xF3lica de Minas Gerais (PUC-MG)\r\nProfessor Roque Anderson
-    Saldanha Teixeira\n"
+  m_text: "<b>Desenvolvimento e Produ\xE7\xE3o</b>\r\n\r\nEnzo Bateli Cyrino\r\n-
+    <i>Design de Cen\xE1rios</i>\r\n- <i>Modelagem e Texturiza\xE7\xE3o de Elementos
+    Ambientais</i>\r\n\r\nEvans Decleve Aguiar Farias\r\n- <i>Interface do Usu\xE1rio</i>\r\n-
+    <i>Scripting e Implementa\xE7\xE3o de Recursos Interativos</i>\r\n\r\nGuilherme
+    Bansemer da Rocha\r\n- <i>Design de Cen\xE1rios</i>\r\n- <i>Modelagem e Texturiza\xE7\xE3o
+    de Elementos Ambientais</i>\r\n\r\nRafael Ara\xFAjo Gl\xF3ria\r\n- <i>Desenvolvimento
+    de Gameplay e L\xF3gica de Programa\xE7\xE3o</i>\r\n- <i>Scripting e Implementa\xE7\xE3o
+    de Recursos Interativos</i>\r\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n<b>Agradecimentos
+    Especiais</b>\r\nPontif\xEDcia Universidade Cat\xF3lica de Minas Gerais (PUC-MG)\r\nProfessor
+    Roque Anderson Saldanha Teixeira\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -485,7 +487,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -514,7 +516,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -458.04163, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -528,6 +530,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583758631}
   m_CullTransparentMesh: 1
+--- !u!114 &583758635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583758631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87413d7a9701e6846ab49c2f49e4c135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 20
 --- !u!1 &877792636
 GameObject:
   m_ObjectHideFlags: 0
