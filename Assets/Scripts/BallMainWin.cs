@@ -41,7 +41,7 @@ public class BallMainWin : MonoBehaviour
         }
         else
         {
-            Debug.Log("Jogo completo. Não há mais fases para carregar.");
+            SceneManager.LoadScene("CreditsScene");
         }
     }
 }
