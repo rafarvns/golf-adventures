@@ -1,9 +1,9 @@
+using TMPro;
 using UnityEngine;
 
 public class VerticalMoveText : MonoBehaviour
 {
     public float speed = 5f; 
-    public float distance = 1000f; 
 
     private Vector3 startPosition;
     private Vector3 endPosition;
@@ -12,7 +12,17 @@ public class VerticalMoveText : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
-        endPosition = new Vector3(startPosition.x, startPosition.y + distance, startPosition.z);
+        // Calcula o tamanho do texto em pixels
+        TextMeshProUGUI textMeshPro = GetComponent<TextMeshProUGUI>();
+
+        // Calcula o tamanho do texto em relação à tela
+        float textHeight = 100 + textMeshPro.preferredHeight / 4;
+
+        // Obtém o tamanho da tela em pixels
+        float screenHeight = Screen.height;
+
+        // Calcula o endPosition somando o tamanho da tela ao tamanho do texto
+        endPosition = new Vector3(startPosition.x, screenHeight + textHeight, startPosition.z);
     }
 
     void Update()
@@ -24,6 +34,7 @@ public class VerticalMoveText : MonoBehaviour
             {
                 isMovingUp = false;
                 ActivateText2(); 
+                gameObject.SetActive(false);
             }
         }
     }
