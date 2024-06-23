@@ -2,24 +2,29 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BallMainWin : MonoBehaviour
 {
     public static int STAGE_CONTROLLER = 1;
     private static int MAX_STAGES = 3;
-    // public EndGameController endGameController;
 
     private bool isSceneLoading = false;
 
-    public bool executeNow = false;
+    public Button NextStageButton;
+
+    private void Start()
+    {
+        if (NextStageButton)
+        {
+            Debug.Log("STAGE_CONTROLLER: " + STAGE_CONTROLLER);
+            NextStageButton.onClick.AddListener(NextStage);
+        }
+    }
 
     private void Update()
     {
-        if (executeNow && !isSceneLoading)
-        {
-            isSceneLoading = true;
-            StartCoroutine(ShowVictoryAndLoadNext());
-        }
+
     }
 
     private void OnCollisionEnter(Collision other)
@@ -31,9 +36,9 @@ public class BallMainWin : MonoBehaviour
         }
     }
 
-    private IEnumerator ShowVictoryAndLoadNext()
+    private void NextStage()
     {
-        yield return new WaitForSeconds(2);
+        Debug.Log("asdf   " + STAGE_CONTROLLER);
         if (STAGE_CONTROLLER < MAX_STAGES)
         {
             STAGE_CONTROLLER++;
