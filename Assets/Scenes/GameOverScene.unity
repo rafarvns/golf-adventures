@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 0}
   minThickness: 0
-  maxThickness: 0.0079
+  maxThickness: 0.05
   oscillationSpeed: 4
 --- !u!1001 &1917284978
 PrefabInstance:
