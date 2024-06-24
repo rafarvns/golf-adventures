@@ -1,9 +1,3 @@
-// COMO ADICIONAR ESSE SCRIPT:
-// 1 - ARRASTE ELE PARA O OBJETO QUE IRA SOFRER A AÇÃP
-// 2 - ABRA O OBJETO QUE IRA SOFRER A AÇÃO E ARRASTE ELE PROPRIO PARA O CAMPO Txt Vitoria
-
-
-
 using UnityEngine;
 using TMPro;
 using System.Collections;
@@ -12,15 +6,33 @@ public class VictoryText : MonoBehaviour
 {
     public TextMeshProUGUI txtVitoria;
     public float animationDuration = 0.5f;
-    public float bounceAmount = 10f; 
+    public float bounceAmount = 10f;
 
     void Start()
-    {       
-        StartCoroutine(AnimateText());
+    {
+        // Garantir que txtVitoria está atribuído
+        if (txtVitoria == null)
+        {
+            txtVitoria = GetComponent<TextMeshProUGUI>();
+        }
+
+        if (txtVitoria != null)
+        {
+            StartCoroutine(AnimateText());
+        }
+        else
+        {
+            Debug.LogError("TextMeshProUGUI component not found on the GameObject.");
+        }
     }
 
     IEnumerator AnimateText()
     {
+        if (txtVitoria == null)
+        {
+            yield break; // Sai da coroutine se txtVitoria for nulo
+        }
+
         TMP_TextInfo textInfo = txtVitoria.textInfo;
         txtVitoria.ForceMeshUpdate();
 
