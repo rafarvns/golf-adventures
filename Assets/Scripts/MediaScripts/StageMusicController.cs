@@ -12,6 +12,7 @@ namespace MediaScripts
         public AudioClip victoryMusic;
         public AudioClip golfSwingSoundEffect;
         public AudioClip wallHitSoundEffect;
+        [FormerlySerializedAs("bonusCollectSound")] public AudioClip bonusCollectSoundEffect;
         // public AudioClip loseMusic;
 
         private AudioSource _backgroundAudioSource;
@@ -82,6 +83,12 @@ namespace MediaScripts
                     break;
                 case SoundEffectEnum.WALL_HIT:
                     sfAudioSource.clip = wallHitSoundEffect;
+                    break;
+                case SoundEffectEnum.BONUS:
+                    if (bonusCollectSoundEffect)
+                    {
+                        sfAudioSource.clip = bonusCollectSoundEffect;   
+                    }
                     break;
                 default:
                     return;

@@ -165,6 +165,15 @@ public class BallMainMovement : MonoBehaviour
 
             transform.position = goTo;
         }
+
+        if (other.gameObject.tag.Equals("Bonus"))
+        {
+            Debug.Log("Oie");
+            Destroy(other.gameObject);
+            stageMusicController.PlaySoundEffect(SoundEffectEnum.BONUS);
+            BallMainWin.CollectStar();
+            playCounter.UpdateStars();
+        }
     }
 
 

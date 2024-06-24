@@ -3,6 +3,7 @@
     public enum SoundEffectEnum
     {
         GOLF_SWING,
-        WALL_HIT
+        WALL_HIT,
+        BONUS
     }
 }

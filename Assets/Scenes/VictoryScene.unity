@@ -1162,6 +1162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextStageButton: {fileID: 1028178219}
+  ResetGoMenuButton: {fileID: 1721341659}
 --- !u!1 &1182137742
 GameObject:
   m_ObjectHideFlags: 0

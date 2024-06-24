@@ -1736,6 +1736,10 @@ PrefabInstance:
       propertyPath: onlyBackground
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1346298013677909923, guid: a00e88858f468d748ad459d3966f23d1, type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: e0e7fb05fd072e34fb6a867846d27fd5, type: 3}
     - target: {fileID: 5238941387229639329, guid: a00e88858f468d748ad459d3966f23d1, type: 3}
       propertyPath: m_Name
       value: StageMusicControllerPrefab
