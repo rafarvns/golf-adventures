@@ -2,24 +2,39 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BallMainWin : MonoBehaviour
 {
     public static int STAGE_CONTROLLER = 1;
     private static int MAX_STAGES = 3;
-    // public EndGameController endGameController;
+    private static int[] COLLECTED_STARS = new[] { 0, 0, 0};
 
     private bool isSceneLoading = false;
 
-    public bool executeNow = false;
+    public Button NextStageButton;
+    public Button ResetGoMenuButton;
+    public Button RestartStageButton;
+
+    private void Start()
+    {
+        if (NextStageButton)
+        {
+            NextStageButton.onClick.AddListener(NextStage);
+        }
+        if (ResetGoMenuButton)
+        {
+            ResetGoMenuButton.onClick.AddListener(ResetGoMenu);
+        }
+        if (RestartStageButton)
+        {
+            RestartStageButton.onClick.AddListener(RestartStage);
+        }
+    }
 
     private void Update()
     {
-        if (executeNow && !isSceneLoading)
-        {
-            isSceneLoading = true;
-            StartCoroutine(ShowVictoryAndLoadNext());
-        }
+
     }
 
     private void OnCollisionEnter(Collision other)
@@ -31,9 +46,15 @@ public class BallMainWin : MonoBehaviour
         }
     }
 
-    private IEnumerator ShowVictoryAndLoadNext()
+    private void ResetGoMenu()
     {
-        yield return new WaitForSeconds(2);
+        STAGE_CONTROLLER = 1;
+        SceneManager.LoadScene(0);
+    }
+
+    private void NextStage()
+    {
+        Debug.Log("asdf   " + STAGE_CONTROLLER);
         if (STAGE_CONTROLLER < MAX_STAGES)
         {
             STAGE_CONTROLLER++;
@@ -43,5 +64,52 @@ public class BallMainWin : MonoBehaviour
         {
             SceneManager.LoadScene("CreditsScene");
         }
+    }
+    
+    private void RestartStage()
+    {
+        SceneManager.LoadScene(STAGE_CONTROLLER);
+    }
+
+    public static int GetMaxPlaysForStage()
+    {
+        switch (STAGE_CONTROLLER)
+        {
+            case 1:
+                return 5;
+            case 2:
+                return 6;
+            case 3:
+                return 7;
+            default:
+                return 1;
+        }
+    }
+
+    public static void GameOver()
+    {
+        SceneManager.LoadScene("GameOverScene");
+    }
+    
+    public static void CollectStar()
+    {
+        if (STAGE_CONTROLLER < 1 || STAGE_CONTROLLER > MAX_STAGES)
+        {
+            Debug.LogError("Invalid stage number: " + STAGE_CONTROLLER);
+            return;
+        }
+
+        COLLECTED_STARS[STAGE_CONTROLLER - 1]++;
+        Debug.Log("Collected stars in stage " + STAGE_CONTROLLER + ": " + COLLECTED_STARS[STAGE_CONTROLLER - 1]);
+    }
+
+    public static int CollectedStarsCount()
+    {
+        if (STAGE_CONTROLLER < 1 || STAGE_CONTROLLER > MAX_STAGES)
+        {
+            Debug.LogError("Invalid stage number: " + STAGE_CONTROLLER);
+            return 0 ;
+        }
+        return COLLECTED_STARS[STAGE_CONTROLLER - 1];
     }
 }
